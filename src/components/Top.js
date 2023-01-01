@@ -8,13 +8,14 @@ const Top = () => {
   // }
 
   //handle pesan menggunakan parameter
-  const handleMessage = (value) => {
+  const handleMessage = (value, e) => {
+    e.preventDefault();
     alert("Halo selamat Pagi");
     alert(value);
   };
 
   return (
-    <a href="/" onClick={() => handleMessage("FAZEEL")}>
+    <a href="/" onClick={(e) => handleMessage("FAZEEL", e)}>
       Top Mantap Is The best
     </a>
   );
