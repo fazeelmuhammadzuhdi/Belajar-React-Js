@@ -6,7 +6,8 @@ class Header extends Component {
     this.state = {
       daftar: "Gulai Kambiang",
       makan: "Udang top Mantap is the Best",
-      inputValue: "Nasi Padang Lamak Bana",
+      inputValue: "",
+      inputKota: "",
       buah: this.props.buah, //parsing data dari props dan jadikan dia state
     };
     this.handlePesan = this.handlePesan.bind(this);
@@ -19,9 +20,19 @@ class Header extends Component {
     alert(value);
   }
 
-  //event target value
-  handleChange(e) {
-    console.log(e.target.value);
+  //event target value dan setstate
+  handleChange(value, e) {
+    // cara cepat dynamic method
+    this.setState({ [value]: e.target.value });
+
+    // cara panjang
+    // const Event = e.target.value;
+    // this.setState((state, props) => {
+    //   return {
+    //     inputValue: Event,
+    //   };
+    // });
+    // console.log(e.target.value);
   }
 
   render() {
@@ -43,7 +54,14 @@ class Header extends Component {
           <input
             type="text"
             value={this.state.inputValue}
-            onChange={this.handleChange}
+            onChange={(e) => this.handleChange("inputValue", e)}
+          />
+          <br />
+          <br />
+          <input
+            type="text"
+            value={this.state.inputKota}
+            onChange={(e) => this.handleChange("inputKota", e)}
           />
         </ul>
       </div>
