@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "tugas2",
+=======
+  "name": "hello-react",
+>>>>>>> 17603a686f2e7f4ae1a67563bda82aa06e61a633
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -34,8 +38,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+<<<<<<< HEAD
   },
   "devDependencies": {
     "react-router-dom": "^6.14.2"
+=======
+>>>>>>> 17603a686f2e7f4ae1a67563bda82aa06e61a633
   }
 }
