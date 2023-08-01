@@ -11,6 +11,10 @@ import Blogs from "./Pages/Blogs";
 import Contact from "./Pages/Contact";
 import NoPage from "./Pages/NoPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import FavoriteColor from "./Pages/FavoriteColor";
+import Timers from "./Pages/Count";
+import Counter from "./Pages/Counter";
+import MyForm from "./Pages/Form";
 // const phoneData = [
 //   { name: "IPHONE 11", price: 1300000, discount: 10 },
 //   { name: "IPHONE 12", price: 1400000, discount: 40 },
@@ -135,16 +139,22 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="blogs" element={<Blogs />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<NoPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <>
+      <MyForm />
+      {/* <Counter /> */}
+      {/* <Timers /> */}
+      {/* <FavoriteColor /> */}
+    </>
+    // <BrowserRouter>
+    //   <Routes>
+    //     <Route path="/" element={<Layout />}>
+    //       <Route index element={<Home />} />
+    //       <Route path="blogs" element={<Blogs />} />
+    //       <Route path="contact" element={<Contact />} />
+    //       <Route path="*" element={<NoPage />} />
+    //     </Route>
+    //   </Routes>
+    // </BrowserRouter>
   );
 }
 
