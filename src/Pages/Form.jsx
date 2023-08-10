@@ -62,7 +62,6 @@ function MyForm() {
     const handleSubmit = (event) => {
         event.preventDefault()
         console.log(inputs);
-
     }
 
 

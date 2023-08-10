@@ -15,6 +15,9 @@ import FavoriteColor from "./Pages/FavoriteColor";
 import Timers from "./Pages/Count";
 import Counter from "./Pages/Counter";
 import MyForm from "./Pages/Form";
+import ProductList from "./Pages/ProductList";
+import AddProduct from "./Pages/AddProduct";
+import EditProduct from "./Pages/EditProduct";
 // const phoneData = [
 //   { name: "IPHONE 11", price: 1300000, discount: 10 },
 //   { name: "IPHONE 12", price: 1400000, discount: 40 },
@@ -140,11 +143,19 @@ import MyForm from "./Pages/Form";
 function App() {
   return (
     <>
-      <MyForm />
+      {/* <MyForm /> */}
       {/* <Counter /> */}
       {/* <Timers /> */}
       {/* <FavoriteColor /> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<ProductList />}></Route>
+          <Route path="/add" element={<AddProduct />}></Route>
+          <Route path="/edit/:id" element={<EditProduct />}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
+
     // <BrowserRouter>
     //   <Routes>
     //     <Route path="/" element={<Layout />}>
